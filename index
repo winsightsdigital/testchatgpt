@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison de la Beurière à Boulogne-sur-Mer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="bg-yellow-500">
+      <nav class="flex justify-between items-center py-4 px-6">
+        <div>
+          <a href="#" class="text-white font-bold text-xl">Maison de la Beurière</a>
+        </div>
+        <div>
+          <button class="mobile-menu-button text-white inline-flex items-center hover:bg-yellow-400 focus:bg-yellow-400 rounded-lg p-2">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path fill="currentColor" d="M3 18h18v-1.5H3V18zm0-5.25h18v-1.5H3v1.5zM3 6v1.5h18V6H3z"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden mobile-menu-items text-white font-semibold text-lg mt-4 md:flex md:mt-0 md:items-center">
+          <li class="ml-6"><a href="#" class="hover:bg-yellow-400 py-2 px-4 rounded-lg">Histoire de la Maison</a></li>
+          <li class="ml-6"><a href="#" class="hover:bg-yellow-400 py-2 px-4 rounded-lg">Les expositions</a></li>
+          <li class="ml-6"><a href="#" class="hover:bg-yellow-400 py-2 px-4 rounded-lg">Informations pratiques</a></li>
+          <li class="ml-6"><a href="#" class="hover:bg-yellow-400 py-2 px-4 rounded-lg">Contactez-nous</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <!-- Main content -->
+    <main class="container mx-auto py-12 px-4">
+      <h1 class="text-4xl font-bold text-red-600 mb-8">Bienvenue à la Maison de la Beurière !</h1>
+      <p class="text-xl text-gray-700 mb-8">
+        Venez découvrir l'histoire et la vie quotidienne des marins pêcheurs de Boulogne-sur-Mer au cœur de notre musée, la Maison de la Beurière.
+      </p>
+      <div class="flex flex-col md:flex-row gap-8 mb-8">
+        <div class="md:w-1/2">
+          <h2 class="text-2xl font-bold text-red-600 mb-4">Histoire de la Maison</h2>
+          <p class="text-lg text-gray-700 mb-4">
+            La Maison de la Beurière est un musée installé dans
+          <a href="#" class="text-red-600 font-semibold hover:underline">En savoir plus sur l'histoire de la Maison ></a>
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold text-red-600 mb-4">Les expositions</h2>
+        <p class="text-lg text-gray-700 mb-4">
+          Découvrez nos expositions temporaires et permanentes qui vous feront voyager dans le temps et l'espace de la pêche en mer. Des objets rares et précieux, des photos, des maquettes et des témoignages de marins vous attendent pour une expérience inoubliable.
+        </p>
+        <a href="#" class="text-red-600 font-semibold hover:underline">Voir les expositions en cours ></a>
+      </div>
+    </div>
+    <div class="bg-gray-100 p-8 rounded-lg mb-8">
+      <h2 class="text-2xl font-bold text-red-600 mb-4">Informations pratiques</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        La Maison de la Beurière est ouverte tous les jours sauf le mardi, de 10h à 18h. Elle est située au 45 rue des Fusillés à Boulogne-sur-Mer, à proximité du port de pêche. Le musée est accessible aux personnes à mobilité réduite et dispose d'un parking gratuit.
+      </p>
+      <a href="#" class="text-red-600 font-semibold hover:underline">Plan d'accès et tarifs ></a>
+      <div class="mb-8">
+      <h2 class="text-2xl font-bold text-red-600 mb-4">Contactez-nous</h2>
+      <form action="#" method="POST" class="flex flex-col gap-4">
+        <label for="name" class="sr-only">Nom</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" class="border border-gray-400 p-2 rounded-md" required>
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" class="border border-gray-400 p-2 rounded-md" required>
+        <label for="message" class="sr-only">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message" class="border border-gray-400 p-2 rounded-md h-32" required></textarea>
+        <button type="submit" class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">Envoyer</button>
+      </form>
+    </div>
+  </main>
+      </form>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-500 py-8">
+  <div class="container mx-auto text-center">
+    <p class="mb-2">&copy; 2023 Maison de la Beurière, Boulogne-sur-Mer</p>
+    <nav>
+      <ul class="flex justify-center">
+        <li class="mx-4"><a href="#" class="hover:text-white">Mentions légales</a></li>
+        <li class="mx-4"><a href="#" class="hover:text-white">Politique de confidentialité</a></li>
+        <li class="mx-4"><a href="#" class="hover:text-white">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  const button = document.querySelector('.mobile-menu-button');
+  const menu = document.querySelector('.mobile-menu-items');
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
